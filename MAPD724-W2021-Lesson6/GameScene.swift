@@ -7,14 +7,32 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
+import AVFoundation
+
+let screenSize = UIScreen.main.bounds
+var screenWidth:CGFloat?
+var screenHeight:CGFloat?
+
 
 class GameScene: SKScene {
     
+    var ocean:Ocean?
+    var island:Island?
     
     override func didMove(to view: SKView) {
         
-        // Get label node from scene and store it for use later
-       
+        screenWidth = frame.width
+        screenHeight = frame.height
+        name = "GAME"
+        
+        //add ocean to the scene
+        ocean = Ocean() //allocates memory
+        ocean?.position = CGPoint(x:0,y:773)
+        addChild(ocean!) //add object to scene
+        
+        island = Island()
+        addChild(island!)
     }
     
     
@@ -49,5 +67,7 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        ocean?.update()
+        island?.update()
     }
 }
