@@ -8,9 +8,9 @@
 import SpriteKit
 import GameplayKit
 
-class Island: GameObject {
+class Plane: GameObject {
     init() {
-        super.init(imageString: "island", initialScale: 2.0)
+        super.init(imageString: "plane", initialScale: 2.0)
         start()
     }
     
@@ -19,33 +19,31 @@ class Island: GameObject {
     }
     
     override func checkBounds() {
-        if position.y <= -730 {
-            reset()
+        if position.x <= -310 {
+            position.x = -310
+        }
+        if position.x >= 310 {
+            position.x = 310
         }
     }
     
     override func reset() {
-        position.y = 730
-        //position.x = CGFloat(Int.random(in: -313...313))
-        let randomX = (randomSource?.nextInt(upperBound: 626))! - 313
-        position.x = CGFloat(randomX)
-        isColliding = false
+
     }
     
     // for initialization
     override func start() {
-        zPosition = 1
+        zPosition = 3
         dy = 5.0
         
     }
     
     override func update() {
         checkBounds()
-        move()
     }
     
-    func move() {
-        position.y -= dy!
-    }
-    
+    func touchMove(newPos: CGPoint)
+       {
+           position = newPos
+       }
 }

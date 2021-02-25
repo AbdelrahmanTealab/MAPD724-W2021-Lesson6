@@ -73,6 +73,9 @@
 		B677F58125E727B700B81734 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677F58025E727B700B81734 /* GameObject.swift */; };
 		B677F58525E72E3100B81734 /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677F58425E72E3100B81734 /* Ocean.swift */; };
 		B677F58925E73C3C00B81734 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677F58825E73C3C00B81734 /* Island.swift */; };
+		B677F58C25E7415100B81734 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677F58B25E7415100B81734 /* Cloud.swift */; };
+		B677F58F25E7473200B81734 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677F58E25E7473200B81734 /* Plane.swift */; };
+		B677F59325E74B3C00B81734 /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677F59225E74B3C00B81734 /* CollisionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +147,9 @@
 		B677F58025E727B700B81734 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		B677F58425E72E3100B81734 /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
 		B677F58825E73C3C00B81734 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
+		B677F58B25E7415100B81734 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		B677F58E25E7473200B81734 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		B677F59225E74B3C00B81734 /* CollisionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,7 @@
 			children = (
 				B677F58325E72E1A00B81734 /* GameObjects */,
 				B677F4F025E71DEC00B81734 /* AppDelegate.swift */,
+				B677F59125E74B2E00B81734 /* Managers */,
 				B677F4F225E71DEC00B81734 /* GameScene.sks */,
 				B677F4F425E71DEC00B81734 /* Actions.sks */,
 				B677F4F625E71DEC00B81734 /* GameScene.swift */,
@@ -299,8 +306,18 @@
 			children = (
 				B677F58425E72E3100B81734 /* Ocean.swift */,
 				B677F58825E73C3C00B81734 /* Island.swift */,
+				B677F58B25E7415100B81734 /* Cloud.swift */,
+				B677F58E25E7473200B81734 /* Plane.swift */,
 			);
 			path = GameObjects;
+			sourceTree = "<group>";
+		};
+		B677F59125E74B2E00B81734 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B677F59225E74B3C00B81734 /* CollisionManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,10 +447,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B677F4F725E71DEC00B81734 /* GameScene.swift in Sources */,
+				B677F58F25E7473200B81734 /* Plane.swift in Sources */,
+				B677F59325E74B3C00B81734 /* CollisionManager.swift in Sources */,
 				B677F57C25E7271800B81734 /* GameProtocol.swift in Sources */,
 				B677F4F925E71DEC00B81734 /* GameViewController.swift in Sources */,
 				B677F58925E73C3C00B81734 /* Island.swift in Sources */,
 				B677F4F125E71DEC00B81734 /* AppDelegate.swift in Sources */,
+				B677F58C25E7415100B81734 /* Cloud.swift in Sources */,
 				B677F58525E72E3100B81734 /* Ocean.swift in Sources */,
 				B677F58125E727B700B81734 /* GameObject.swift in Sources */,
 			);

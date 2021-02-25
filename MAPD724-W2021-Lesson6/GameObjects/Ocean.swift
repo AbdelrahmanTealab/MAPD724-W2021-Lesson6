@@ -26,7 +26,6 @@ class Ocean: GameObject {
     
     override func reset() {
         position.y = 773
-        isColliding = false
     }
     
     // for initialization
